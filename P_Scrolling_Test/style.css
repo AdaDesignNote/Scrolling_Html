@@ -1,0 +1,114 @@
+/* ========== 基本設定 ========== */
+body {
+  margin: 0;
+  background: #000; /* 整體背景黑 */
+  color: #fff;
+  font-family: sans-serif;
+}
+
+/* 整個滾動區域（保持高度，讓你能捲到 bottom） */
+.scroll-wrap {
+  height: 300vh;
+}
+
+/* ========== Sticky 主動畫容器 ========== */
+.animation-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: transparent !important; /* 完全透明 */
+}
+
+/* ========== 背景動畫層：影片 / 序列圖 ========== */
+.animation-container video,
+.animation-container img {
+  position: absolute;
+  inset: 0; /* top:0; left:0; width:100%; height:100% */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* 填滿畫面（無黑邊） */
+  object-position: center; /* 確保置中 */
+  z-index: 1;
+  display: none; /* JS 控制是否顯示 */
+  background: transparent !important;
+}
+
+/* ========== HERO 文字（動畫上的文字） ========== */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 15;        /* 在影片上方 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  text-align: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+  background: transparent !important;
+}
+
+.hero-overlay h1 {
+  font-size: 30px;
+  margin: 0 0 16px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8); /* 讓字能在亮背景上看得清楚 */
+}
+
+.hero-overlay p {
+  font-size: 18px;
+  max-width: 480px;
+  margin: 0;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* ========== 底部選單（bottom 模式才顯示） ========== */
+.menu-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 32px;
+  box-sizing: border-box;
+  z-index: 20;
+  display: none; /* JS 控制顯示 */
+  background: transparent !important; /* ⭐ 完全透明、完全無漸層 */
+}
+
+/* 選單排版 */
+.menu {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-end;
+}
+
+/* 選單按鈕 */
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15); /* 輕微毛玻璃 */
+  backdrop-filter: blur(8px);
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Debug 區塊（可關閉） */
+#debug {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  color: #fff;
+  font-size: 12px;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 999;
+}
