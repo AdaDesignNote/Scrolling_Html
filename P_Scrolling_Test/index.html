@@ -37,7 +37,7 @@
       display: none; /* JS 再決定誰顯示 */
     }
 
-    /* ⭐ 頂部 / 中間共用的文字（壓在背景上） */
+    /* 頂部 / 中間共用的文字（壓在背景上） */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -46,7 +46,7 @@
   box-sizing: border-box;
 }
 
-/* ⭐ 整組 h1 + p：靠左 + 上下置中 */
+/* 整組 h1 + p：靠左 + 上下置中 */
 .hero-text {
   position: absolute;
   top: 50%;                  /* 往下 50% */
@@ -63,7 +63,7 @@
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0);
 }
 
-/* ⭐ p：小字，跟在 h1 下面 */
+/* p：小字，跟在 h1 下面 */
 .hero-text p {
   position: static;
   display: block;
@@ -74,7 +74,7 @@
   text-shadow: 0 3px 8px rgba(0, 0, 0, 0);
 }
 
-/* ⭐ 底部選單 overlay（只在 bottom 模式顯示） */
+/* 底部選單 overlay（只在 bottom 模式顯示） */
 .menu-overlay {
   position: absolute;
   left: 0;
@@ -137,9 +137,12 @@
       <video
         id="idleTopVideo"
         src="img_A_mov/A_movie_6fps_v001.mp4"
+        autoplay
         muted
         loop
         playsinline
+        preload="auto"
+        poster="img_A_mov/A_movie_cover.jpg"
       ></video>
 
       <!-- 中間序列圖 -->
