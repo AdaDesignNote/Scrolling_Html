@@ -44,7 +44,7 @@ function updateFrame(progress) {
   frameIndex = Math.max(startFrame, Math.min(endFrame, frameIndex));
 
   const frameName = padNumber(frameIndex, 4);
-  avatar.src = `img_A_sequence/${baseName}${frameName}.png`;
+  avatar.src = `img_A_sequence/${baseName}${frameName}.jpg`;
 
   if (debug) {
     debug.textContent =
