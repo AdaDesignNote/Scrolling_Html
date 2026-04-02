@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> /* 加這行 手機字幕才會一樣大 */
   <title>Scroll Menu</title>
 
   <style>
@@ -50,14 +50,14 @@
 .hero-text {
   position: absolute;
   top: 50%;                  /* 往下 50% */
-  left: 100px;                /* 距離左邊，可改 40 / 80 */
+  left: 25px;                /* 距離左邊，可改 40 / 80 */
   transform: translateY(-50%); /* 再往上拉自己高度一半 → 正中間 */
   text-align: left;
 }
 .hero-text h1 {
   position: static;          /* 確保不是 absolute */
   display: block;
-  font-size: 100px;           /* 150px 太誇張可以先小一點 */
+  font-size: 60px;           /* 150px 太誇張可以先小一點 */
   margin: 10 0 0px;          /* 和下面 p 的間距 */
   line-height: 1.1;          /* 避免行距太小 */
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0);
@@ -67,7 +67,7 @@
 .hero-text p {
   position: static;
   display: block;
-  font-size: 40px;
+  font-size: 20px;
   margin: 0;
   line-height: 1.5;
   max-width: 700px;
